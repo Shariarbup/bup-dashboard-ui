@@ -16,12 +16,12 @@ h1 {
     font-size: 2.5rem;
 }
 
-.accordian {
+.accordion {
     width: 90%;
     margin: 0 auto;
 }
 
-.accordian-item {
+.accordion-item {
     background-color: #fff;
     color: #111;
     margin: 1rem 0;
@@ -29,7 +29,7 @@ h1 {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
 }
 
-.accordian-item-header {
+.accordion-item-header {
     padding: 0.5rem 3rem 0.5rem 1rem;
     min-height: 3.5rem;
     line-height: 1.25rem;
@@ -40,7 +40,7 @@ h1 {
     cursor: pointer;
 }
 
-.accordian-item-header::after {
+.accordion-item-header::after {
     /* content: "\25BE";  if i use this then transform = rotate(180deg/ -180deg for anti clock wise)*/ 
 
     content: '\002B';
@@ -51,12 +51,12 @@ h1 {
 
 }
 
-.accordian-item-header.active::after {
+.accordion-item-header.active::after {
     content: ' \2212';
     /* transform: rotate(45deg); */
 }
 
-.accordian-item-body {
+.accordion-item-body {
     /* display: block; */
     max-height: 0;
     overflow: hidden;
@@ -64,7 +64,7 @@ h1 {
    
 }
 
-.accordian-item-body-content {
+.accordion-item-body-content {
     padding: 1rem;
     line-height: 1.5rem;
     border-top: 2px solid;
@@ -81,7 +81,7 @@ h1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.accordian-item-body-content a {
+.accordion-item-body-content a {
     display: block;
     flex: 1 1 calc(33.333% - 30px); /* Three items per row with gap */
     text-align: center;
@@ -97,18 +97,18 @@ h1 {
 
 }
 
-.accordian-item-body-content a:hover {
+.accordion-item-body-content a:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Elevated shadow on hover */
     transform: translateY(-4px); /* Slight lift effect */
     background: linear-gradient(135deg, #2575fc, #6a11cb); /* Reverse gradient on hover */
 }
 
-.accordian-item-body-content a:active {
+.accordion-item-body-content a:active {
     transform: translateY(0); /* Reset on click */
     background: linear-gradient(135deg, #4e8ef7, #8859cc); /* Slightly muted gradient on active */
 }
 
-.accordian-item-header.active + .accordian-item-body {
+.accordion-item-header.active + .accordion-item-body {
     /* display: none; */
     max-height: auto;
 }

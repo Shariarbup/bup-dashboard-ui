@@ -1,18 +1,18 @@
-const accordianItemHeaders = document.querySelectorAll('.accordian-item-header');
+const accordionItemHeaders = document.querySelectorAll('.accordion-item-header');
 
-accordianItemHeaders.forEach(accordianItemHeader => {
+accordionItemHeaders.forEach(accordionItemHeader => {
 
-    accordianItemHeader.classList.add("active");
-    const accordianItemBody = accordianItemHeader.nextElementSibling;
-    accordianItemBody.style.maxHeight = accordianItemBody.scrollHeight + "px";
+    accordionItemHeader.classList.add("active");
+    const accordionItemBody = accordionItemHeader.nextElementSibling;
+    accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
     
-    accordianItemHeader.addEventListener("click", event => {
-        accordianItemHeader.classList.toggle("active");
-        const accordianItemBody =  accordianItemHeader.nextElementSibling;
-        if (accordianItemHeader.classList.contains("active")) {
-            accordianItemBody.style.maxHeight = accordianItemBody.scrollHeight + "px";
+    accordionItemHeader.addEventListener("click", event => {
+        accordionItemHeader.classList.toggle("active");
+        const accordionItemBody =  accordionItemHeader.nextElementSibling;
+        if (accordionItemHeader.classList.contains("active")) {
+            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
         } else {
-            accordianItemBody.style.maxHeight = 0;
+            accordionItemBody.style.maxHeight = 0;
         }
     })
 })
