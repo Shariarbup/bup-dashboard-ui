@@ -7,12 +7,9 @@
 body {
     font-family: "Arial", sans-serif;
     color: #fff;
-    /* background-color: #34495e; */
-    background: linear-gradient(135deg, #2a3f5f, #1d1e26); /* Deep blue to dark gradient */
-    background-attachment: fixed; /* Ensure the background stays fixed during scrolling */
-    background-size: cover; /* Cover the entire screen */
-   
-   
+    background: linear-gradient(135deg, #2a3f5f, #1d1e26);
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 h1 {
@@ -47,7 +44,6 @@ h1 {
 
 .accordion-item-header::after {
     /* content: "\25BE";  if i use this then transform = rotate(180deg/ -180deg for anti clock wise)*/ 
-
     content: '\002B';
     font-size: 2rem;
     position: absolute;

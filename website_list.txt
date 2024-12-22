@@ -1,3 +1,5 @@
+
+BUP MAIN APPLICATION
 <a href="https://dashboard.bup.edu.bd/#"></a>
 <a href="https://www.bup.edu.bd/">BUP Main Website</a>
 <a href="https://ucam.bup.edu.bd/">UCAM</a>
@@ -8,6 +10,8 @@
 <a href="https://outlook.office.com/">Outlook</a>
 <a href="https://www.turnitin.com/">Turnitin</a>
 <a href="https://bdren.zoom.us/">Zoom</a>
+
+Affiliated Applications
 <a href="https://afregistration.bup.edu.bd/">Affiliated Registration</a>
 <a href="https://ioc.bup.edu.bd/">Inspector of Colleges Management</a>
 <a href="https://babss.bup.edu.bd/">BA/BSS Prog Registration</a>
@@ -15,15 +19,23 @@
 <a href="https://vrms.bup.edu.bd/">Vehicle Requisition</a>
 <a href="https://onestopservice.bup.edu.bd/">One Stop Service</a>
 <a href="http://ebook.bup.edu.bd/">e-Book</a>
+
+Department Applications
 <a href="https://payroll.bup.edu.bd/">Payroll</a>
 <a href="https://passout.bup.edu.bd/">Pass-Out</a>
 <a href="https://apa.bup.edu.bd/">APA Management</a>
 <a href="http://event.bup.edu.bd/">Event</a>
 <a href="http://chsr.bup.edu.bd/">CHSR</a>
 <a href="https://mess.bup.edu.bd/">Mess</a>
+
+Seasonal Applications
 <a href="https://icict4sd.bup.edu.bd/">ICICT4SD</a>
 <a href="https://convocation.bup.edu.bd/">Convocation registration</a>
 <a href="https://alumni.bup.edu.bd/">Alumni registration</a>
+
+Un-Used Applications
 <a href="https://mess.bup.edu.bd/">Mess Management</a>
 <a href="https://lms.bup.edu.bd/">LMS</a>
 <a href="https://procurement.bup.edu.bd/">Procurement</a>
+
+Back-Office Applications
