@@ -1,0 +1,41 @@
+Categories End Point
+------------------------
+
+/categories
+
+/categories/new
+
+/categories/{categoryId}
+
+/categories/{id}/edit
+
+
+/categories/search
+
+
+DashBoard end point
+----------------------
+/dashboards
+
+/dashboards/search
+
+
+Links end point
+----------------------
+/links
+
+/links/new
+
+/links/{id}/edit
+
+/links/search
+
+
+Uncontroller end point 
+-------------------------
+/users
+/users/delete/{id}
+/register
+/register/save
+/users/{id}/edit
+/users/search

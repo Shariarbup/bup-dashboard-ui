@@ -1,5 +1,5 @@
 
-BUP MAIN APPLICATION
+Main Applications
 <a href="https://dashboard.bup.edu.bd/#"></a>
 <a href="https://www.bup.edu.bd/">BUP Main Website</a>
 <a href="https://ucam.bup.edu.bd/">UCAM</a>
@@ -16,9 +16,15 @@ Affiliated Applications
 <a href="https://ioc.bup.edu.bd/">Inspector of Colleges Management</a>
 <a href="https://babss.bup.edu.bd/">BA/BSS Prog Registration</a>
 <a href="https://inventory.bup.edu.bd/">Inventory</a>
+
+
+Internal Applications
+<a href="https://inventory.bup.edu.bd/">Inventory</a>
 <a href="https://vrms.bup.edu.bd/">Vehicle Requisition</a>
 <a href="https://onestopservice.bup.edu.bd/">One Stop Service</a>
 <a href="http://ebook.bup.edu.bd/">e-Book</a>
+To Do List
+Issues
 
 Department Applications
 <a href="https://payroll.bup.edu.bd/">Payroll</a>
@@ -39,3 +45,12 @@ Un-Used Applications
 <a href="https://procurement.bup.edu.bd/">Procurement</a>
 
 Back-Office Applications
+Microsoft 365
+Web Manage
+Koha
+Stagging Server
+Old Website
+Database
+Event
+Suggestion
+Website Backend
