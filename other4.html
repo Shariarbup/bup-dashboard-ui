@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUP Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    animation: fadeInDown 1.2s ease-in-out;
+}
+
+.summary-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.summary-card:hover {
+    transform: scale(1.05);
+}
+
+.accordion-button {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.accordion-button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-4">
+        <h1 class="mb-0">BUP Dashboard</h1>
+    </header>
+
+    <!-- Dashboard Summary Section -->
+    <section class="container my-4">
+        <div class="row text-center">
+            <!-- Cards for Key Metrics -->
+            <div class="col-md-3">
+                <div class="card summary-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Students</h5>
+                        <p class="card-text" id="total-students">Loading...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card summary-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Teachers</h5>
+                        <p class="card-text" id="total-teachers">Loading...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card summary-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Officers & Staff</h5>
+                        <p class="card-text" id="total-staff">Loading...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card summary-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Offices</h5>
+                        <p class="card-text" id="total-offices">Loading...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="container my-5">
+        <div class="accordion" id="eventsAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#todayEvents" aria-expanded="true">
+                        Today’s Events
+                    </button>
+                </h2>
+                <div id="todayEvents" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                        <ul id="today-events-list">
+                            <li>Loading...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#upcomingEvents" aria-expanded="false">
+                        Upcoming Events
+                    </button>
+                </h2>
+                <div id="upcomingEvents" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <ul id="upcoming-events-list">
+                            <li>Loading...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Information Section -->
+    <section class="container my-5">
+        <h3 class="mb-4">Additional Information</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <ul>
+                    <li>Number of Faculty: <span id="number-of-faculty">Loading...</span></li>
+                    <li>Number of Departments: <span id="number-of-departments">Loading...</span></li>
+                    <li>Number of Programs: <span id="number-of-programs">Loading...</span></li>
+                    <li>Number of Courses: <span id="number-of-courses">Loading...</span></li>
+                    <li>Number of Affiliated Organizations: <span id="affiliated-orgs">Loading...</span></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul>
+                    <li>Number of Books in Library: <span id="books-in-library">Loading...</span></li>
+                    <li>Number of Published Journals: <span id="published-journals">Loading...</span></li>
+                    <li>Number of Published Articles: <span id="published-articles">Loading...</span></li>
+                    <li>Number of Alumni Registered: <span id="registered-alumni">Loading...</span></li>
+                    <li>Number of Biometric Users: <span id="biometric-users">Loading...</span></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul>
+                    <li>Number of Switches: <span id="switches">Loading...</span></li>
+                    <li>Number of Servers: <span id="servers">Loading...</span></li>
+                    <li>Number of Printers: <span id="printers">Loading...</span></li>
+                    <li>Number of Desktops Distributed: <span id="desktops-distributed">Loading...</span></li>
+                    <li>Number of Complaints Resolved: <span id="complaints-resolved">Loading...</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">© 2024 BUP Dashboard</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    // Example data for dashboard metrics
+    document.getElementById('total-students').innerText = 5000;
+    document.getElementById('total-teachers').innerText = 300;
+    document.getElementById('total-staff').innerText = 200;
+    document.getElementById('total-offices').innerText = 50;
+
+    // Events data
+    const todayEvents = ["Seminar on AI", "Workshop on Cybersecurity"];
+    const upcomingEvents = ["Convocation", "Sports Week"];
+
+    const todayList = document.getElementById('today-events-list');
+    todayList.innerHTML = todayEvents.map(event => `<li>${event}</li>`).join('');
+
+    const upcomingList = document.getElementById('upcoming-events-list');
+    upcomingList.innerHTML = upcomingEvents.map(event => `<li>${event}</li>`).join('');
+});
+
+</script>
+
+</html>
