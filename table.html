@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICT & Academic Information</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #e9f7fc; /* Soft background color for better contrast */
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      margin-top: 60px;
+    }
+    .table-container {
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    .table-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+    .table-container h2 {
+      color: #fff;
+      background-color: #333;
+      text-align: center;
+      padding: 15px 0;
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: 700;
+      border-radius: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+    th, td {
+      padding: 12px 15px;
+      text-align: center;
+      font-size: 16px;
+    }
+    th {
+      background-color: #2d3e50; /* Darker background for headers */
+      color: #fff;
+      border-radius: 5px;
+    }
+    td {
+      background-color: #f4f6f9; /* Light background color for rows */
+      color: #333;
+      border-bottom: 1px solid #ddd;
+      transition: background-color 0.3s ease;
+    }
+    td:hover {
+      background-color: #c7d6e5; /* Soft hover color */
+    }
+    tr:hover td {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .row-spacing {
+      margin-bottom: 40px;
+    }
+    .col-section {
+      padding: 20px;
+      background-color: #f5f9fc;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+    .col-section:hover {
+      background-color: #e3f2f9;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .table-row {
+      animation: fadeIn 1s ease-in;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row row-spacing">
+      <!-- ICT Activities Table -->
+      <div class="col-md-6 col-section">
+        <div class="table-container">
+          <h2>ICT Activities</h2>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Activity</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody id="ict-activities">
+              <!-- ICT rows will be inserted here dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Academic Information Table -->
+      <div class="col-md-6 col-section">
+        <div class="table-container">
+          <h2>Academic Information</h2>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Information</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody id="academic-info">
+              <!-- Academic rows will be inserted here dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Data for ICT Activities
+    const ictActivities = [
+      { name: 'Email Users', value: '150' },
+      { name: 'Zoom Users', value: '120' },
+      { name: 'Turnitin Users', value: '100' },
+      { name: 'Bio Metric Users', value: '75' },
+      { name: 'ID Cards Issued (Month/Year)', value: '40 (Dec 2024)' },
+      { name: 'Number of Access Points', value: '25' },
+      { name: 'Number of Switches', value: '10' },
+      { name: 'Number of Servers', value: '5' },
+      { name: 'Number of Printers', value: '20' },
+      { name: 'Laptops Distributed', value: '50' },
+      { name: 'Number of Halls', value: '8' },
+      { name: 'Desktops Distributed', value: '30' },
+      { name: 'Complaints Resolved (Month/Year)', value: '15 (Dec 2024)' }
+    ];
+
+    // Data for Academic Information
+    const academicInfo = [
+      { name: 'Number of Faculty', value: '100' },
+      { name: 'Number of Departments', value: '5' },
+      { name: 'Number of Programs', value: '15' },
+      { name: 'Number of Courses', value: '200' },
+      { name: 'Affiliated Organizations', value: '10' },
+      { name: 'Number of Graduate Students', value: '500' },
+      { name: 'Books in Library', value: '3000' },
+      { name: 'Publisher Journals', value: '50' },
+      { name: 'Publisher Articles', value: '200' },
+      { name: 'Registered Alumni Students', value: '1500' }
+    ];
+
+    // Function to generate table rows for ICT Activities
+    function generateIctTableRows() {
+      const tableBody = document.getElementById('ict-activities');
+      ictActivities.forEach(activity => {
+        const row = document.createElement('tr');
+        row.classList.add('table-row');
+        row.innerHTML = `
+          <td>${activity.name}</td>
+          <td>${activity.value}</td>
+        `;
+        tableBody.appendChild(row);
+      });
+    }
+
+    // Function to generate table rows for Academic Information
+    function generateAcademicTableRows() {
+      const tableBody = document.getElementById('academic-info');
+      academicInfo.forEach(info => {
+        const row = document.createElement('tr');
+        row.classList.add('table-row');
+        row.innerHTML = `
+          <td>${info.name}</td>
+          <td>${info.value}</td>
+        `;
+        tableBody.appendChild(row);
+      });
+    }
+
+    // Generate rows on page load
+    window.onload = () => {
+      generateIctTableRows();
+      generateAcademicTableRows();
+    };
+  </script>
+
+</body>
+</html>
